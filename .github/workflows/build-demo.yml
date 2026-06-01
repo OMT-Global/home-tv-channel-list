@@ -7,7 +7,11 @@ on:
 
 jobs:
   build-demo:
-    runs-on: ubuntu-latest
+    runs-on:
+      - self-hosted
+      - linux
+      - shell-only
+      - public
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
